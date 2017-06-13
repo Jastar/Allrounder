@@ -1,0 +1,460 @@
+﻿@import "mixins.scss";
+
+h1 {@include font(28px, 42px, "GeorgiaRegular", #333333)}
+h2 {@include font(26px, 26px, "GeorgiaRegular", #fff)}
+h3 {@include font(18px, 21.6px, "GeorgiaRegular", #666666)}
+h4 {@include font(14px, 16.8px, "GeorgiaRegular", #7c9c37)}
+h5 {@include font(13px, 15.6px, "GeorgiaRegular", #666666)}
+h6 {@include font(12px, 14.4px, "GeorgiaRegular", #666666)}
+
+body {@include font(12px, 19.2px, "GeorgiaRegular", #666666)}
+
+.text-left {text-align: left;}
+.text-center {text-align: center;}
+.text-right {text-align: right;}
+
+
+
+
+/********************************************* SECTION#TOPBAR *********************************************/
+
+	section#topBar {
+		
+		p {
+			margin: 12px auto 12px 0px;
+		}
+
+		div.search {
+			margin: 7px auto;
+			form {
+				margin-left: auto;
+				max-width: 220px;
+				width: 100%;
+				background-color: #e1e1e1;
+				border-radius: 15px;
+				padding: 2px;
+				
+				input {
+					border: none;
+					outline: none;
+					background-color: #e1e1e1;
+					max-width: 159px;
+					width: 100%;
+					border-radius: 15px;
+					padding-left: 13px;
+						&::-webkit-input-placeholder       {color: #313131; opacity: 1; transition: opacity 0.4s ease;}
+						&::-moz-placeholder                {color: #313131; opacity: 1; transition: opacity 0.4s ease;}
+						&:-moz-placeholder                 {color: #313131; opacity: 1; transition: opacity 0.4s ease;}
+						&:-ms-input-placeholder            {color: #313131; opacity: 1; transition: opacity 0.4s ease;}
+						&:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.4s ease;}
+						&:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.4s ease;}
+						&:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.4s ease;}
+						&:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.4s ease;}
+
+				}
+
+				button {
+					background-color: transparent;
+					border: none;
+					outline: none;
+					color: #000000;
+					margin: 0 auto;
+					-webkit-transition: opacity 0.3s ease-in-out;
+					-o-transition: opacity 0.3s ease-in-out;
+					transition: opacity 0.3s ease-in-out;
+						&:hover {
+							opacity: 0.7;
+						};
+
+				}
+			}
+		}
+	}
+/********************************************* SECTION#TOPBAR *********************************************/
+
+
+
+/********************************************* HEADER *********************************************/
+
+	header {
+		background: #222222;
+
+
+		div.col-lg-3 {
+			h2 {
+			margin: 25px auto 0px auto;
+				&::first-letter {
+					font-size: 36px;
+				};
+			}
+
+			span {
+				@include font($color: #fff);
+				display: block;
+				margin: 10px auto;
+			}
+		}
+
+
+		ul.menu, ul.menuXS {
+			padding: 0px;
+				li {
+					a {
+						@include font(12px, 12px, "GeorgiaRegular", #fff);
+					 		text-decoration: none;
+					 		-webkit-transition: color 0.3s ease-in-out;
+					 		-o-transition: color 0.3s ease-in-out;
+					 		transition: color 0.3s ease-in-out;
+					 			&:hover {
+					 				color: #7c9c37;
+					 			};
+					}
+				}
+		}
+
+
+
+		ul.menu {
+			margin: 35px auto;
+			text-align: center;
+				li {
+					display: inline-block;
+					max-width: 135px;
+					padding: 0px 20px;
+					border-right: 1px solid #828282;
+
+
+						&:last-child {
+							border-right:none;
+						};
+
+						a {
+							display: block;
+						}
+
+					 	span {display: inline-block;}
+				}
+		}
+
+		button#menu {
+			margin: 25px auto 20px auto;
+			background-color: transparent;
+			border: none;
+			outline: none;
+			color: #fff;
+			-webkit-transition: opacity 0.3s ease-in-out;
+			-o-transition: opacity 0.3s ease-in-out;
+			transition: opacity 0.3s ease-in-out;
+				&:hover {
+					opacity: 0.7;
+				};
+				&:active {
+					-webkit-transform: translate(2px, 2px);
+					-ms-transform: translate(2px, 2px);
+					-o-transform: translate(2px, 2px);
+					transform: translate(2px, 2px);
+				};
+		}
+
+		ul.menuXS {
+			display: none;
+			text-align: center;
+				li {
+					display: block;
+					padding: 5px 0px;
+					
+
+						a {
+					 		display: block;
+					 	}
+
+					 	
+				}
+		}
+	}
+/********************************************* HEADER *********************************************/
+
+
+
+/********************************************* SECTION#SLIDER *********************************************/
+
+	section#slider {
+		div.col-lg-12 {
+			padding: 0px;
+			border-top: 2px solid #7c9c37;
+		}
+			div.Wallop-list {
+				.slide1, .slide2, .slide3, .slide4, .slide5 {
+					max-width: 100%;
+					max-height: 380px;
+					width:100%;
+					height: 380px;
+				}
+
+				.slide1 {
+					background: url("../images/slide1.gif");
+				}
+
+				.slide2 {
+					background: url("../images/slide2.gif");
+				}
+
+				.slide3 {
+					background: url("../images/slide3.gif");
+				}
+
+				.slide4 {
+					background: url("../images/slide4.gif");
+				}
+
+				.slide5 {
+					background: url("../images/slide5.gif");
+				}
+			}
+
+			button.Wallop-buttonPrevious, button.Wallop-buttonNext {
+				position: absolute;
+				top: 50%;
+				background-color: transparent;
+				border: none;
+				outline: none;
+				color: #666666;
+				-webkit-transition: opacity 0.3s ease-in-out;
+				-o-transition: opacity 0.3s ease-in-out;
+				transition: opacity 0.3s ease-in-out;
+					i.fa-stack-1x {color: #666;}
+					&:hover {
+						opacity: 0.5;
+					};
+					&:active {
+						-webkit-transform: translate(2px, 2px);
+						-ms-transform: translate(2px, 2px);
+						-o-transform: translate(2px, 2px);
+						transform: translate(2px, 2px);
+					};
+
+			}
+
+			button.Wallop-buttonPrevious {
+				left: 0%;
+			}
+
+			button.Wallop-buttonNext {
+				right: 0%;
+			}	
+	}
+/********************************************* SECTION#SLIDER *********************************************/
+
+
+
+/********************************************* SECTION#ABOUT *********************************************/
+
+	section#about {
+		padding-bottom: 40px;
+
+		div.col-lg-12 {
+			h1 {
+				font-style: italic;
+				margin: 45px auto 0px auto;
+				max-width: 905px;
+			}
+		}
+
+		div.col-lg-12 {
+			hr {
+				max-width: 800px;
+				border: none;
+				border-bottom: 2px solid #e8e8e8;
+				border-radius: 15px;
+				margin: 50px auto;
+			}
+		}
+
+		div.col-lg-3 {
+			figure {
+				margin: 0 auto;
+				max-width: 225px;
+				background-color: #f0f0f0;
+
+				img {width: 100%;}
+				
+				h3 {
+					margin: 20px auto 20px 15px;
+					color: #7c9c37;
+				}
+
+				figcaption {
+					margin: 0px auto 0px 15px;
+					padding-bottom: 20px;
+				}
+
+				h3, figcaption {
+					text-align: left;
+				}
+			}
+		}
+
+		div.col-lg-6 {
+			h3 {
+				margin: 0 auto;
+			}
+
+			a {
+				@include font(13px, 15.6px, "GeorgiaRegular", #7b9b37);
+				text-decoration: none;
+				-webkit-transition: opacity 0.3s ease-in-out;
+				-o-transition: opacity 0.3s ease-in-out;
+				transition: opacity 0.3s ease-in-out;
+					&:hover {opacity: 0.7;};
+			}
+
+			div.col-lg-12 {
+				hr {
+					margin: 10px auto 20px auto;
+				}
+			}
+
+
+			div.col-lg-4 {
+				h4 {
+					margin: 0 auto;
+				}
+
+				p {
+					text-align: left;
+					margin: 15px auto 30px 0;
+					max-width: 130px;
+				}
+			}
+
+			h5 {margin: 20px auto 10px auto;}
+		}
+	}
+/********************************************* SECTION#ABOUT *********************************************/
+
+
+
+/********************************************* FOOTER *********************************************/
+	
+	footer {
+		background: #222222;
+			
+			h6 {
+				margin: 30px auto 20px auto;
+			}
+
+			a {
+				text-decoration: none;
+				color: #7c9c37;
+					&:hover {
+						opacity: 0.7;
+						color: #7c9c37;
+						text-decoration: none;
+					};
+			}
+
+			div.about {
+
+				img {
+					border: 1px solid #3a3a3a;
+					padding: 4px;
+					margin: 0 auto;
+				}
+
+				p {
+					margin: 20px auto 15px 0;
+					max-width: 170px;
+				}
+			}
+
+			div.link {
+				ul#linkblock {
+					padding: 0px;
+					margin: 0 auto;
+						li {
+							max-width: 205px;
+							list-style-image: url("../images/listarrow.gif");
+							list-style-position: inside;
+							padding: 5px 0px;
+							border-bottom: 1px solid #3a3a3a;
+						}
+				}
+			}
+
+			div.blog {
+				div.bloginfo {
+					h4 {
+						color: #666666;
+						margin: 0 auto;
+					}
+
+					p {
+						margin: 0px auto 5px 0;
+						max-width: 260px;
+					}
+
+					a {
+						display: block;
+						margin: 0px auto 20px auto;
+					}
+				}
+			}
+
+			div.contact {
+				div.contacts {
+					p {
+						margin: 5px auto;
+					}
+				}
+
+				div.newsletter {
+					form {
+						input[type="text"], input[type="email"] {
+							max-width: 260px;
+							width: 100%;
+							display: block;
+							padding: 10px;
+							border-radius: 5px;
+							border: none;
+							outline: none;
+							background: #353535;
+							&::-webkit-input-placeholder       {color: #807d77; opacity: 1; transition: opacity 0.4s ease;}
+							&::-moz-placeholder                {color: #807d77; opacity: 1; transition: opacity 0.4s ease;}
+							&:-moz-placeholder                 {color: #807d77; opacity: 1; transition: opacity 0.4s ease;}
+							&:-ms-input-placeholder            {color: #807d77; opacity: 1; transition: opacity 0.4s ease;}
+							&:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.4s ease;}
+							&:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.4s ease;}
+							&:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.4s ease;}
+							&:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.4s ease;}
+
+						}
+
+						input[type="email"] {
+							margin: 10px auto 10px 0;
+						}
+
+						input[type="submit"] {
+							@include font(13px, 20.58px, "GeorgiaRegular", #fff);
+							background-color: #7c9c37;
+							padding: 5px 15px;
+							display: block;
+							border: none;
+							outline: none;
+							border-radius: 5px;
+						}
+					}
+				}
+			}
+
+			div.col-lg-12 {
+				hr {
+					border: none;
+					border-bottom: 2px solid #3a3a3a;
+				}
+			}
+
+	}
+
+/********************************************* FOOTER *********************************************/
+
+
